@@ -1,1 +1,1158 @@
-/* Add you CSS here */
+/* Basic colors and page settings */
+:root {
+	--background: #121212;
+	--panel: #202020;
+	--panel-light: #2b2b2b;
+	--accent: #e34242;
+	--text: #f2f2f2;
+	--muted-text: #b8b8b8;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--text);
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+}
+
+/* Sticky navigation */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #181818;
+	border-bottom: 1px solid #444;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 16px 24px;
+}
+
+a {
+	color: var(--accent);
+}
+
+.site-label {
+	color: var(--text);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nav-links a {
+	margin-left: 18px;
+	color: var(--muted-text);
+	text-decoration: none;
+}
+
+.nav-links a:hover,
+.site-label:hover {
+	color: var(--accent);
+}
+
+/* Shared section styles */
+.section-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 88px 24px;
+	scroll-margin-top: 72px;
+}
+
+.alternate-section {
+	max-width: none;
+	padding-right: max(24px, calc((100% - 1052px) / 2));
+	padding-left: max(24px, calc((100% - 1052px) / 2));
+	background: #181818;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+}
+
+h1 {
+	max-width: 720px;
+	font-size: 48px;
+}
+
+h2 {
+	margin-bottom: 28px;
+	color: var(--accent);
+}
+
+h3 {
+	margin-bottom: 10px;
+}
+
+.eyebrow,
+.project-number,
+.status {
+	color: var(--accent);
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+/* Hero section */
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 650px;
+	gap: 48px;
+}
+
+.hero-copy {
+	flex: 1;
+}
+
+.hero-name {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.identity-list {
+	padding-left: 20px;
+	color: var(--muted-text);
+	font-weight: bold;
+}
+
+.hero-quote {
+	color: var(--muted-text);
+	font-style: italic;
+}
+
+.button,
+.project-card a {
+	display: inline-block;
+	margin: 8px 8px 8px 0;
+	padding: 10px 16px;
+	border: 1px solid var(--accent);
+	border-radius: 4px;
+	background: var(--accent);
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.button:hover,
+.project-card a:hover {
+	background: #b92f2f;
+}
+
+.button-outline {
+	background: transparent;
+}
+
+/* About and education sections */
+.content-panel,
+.education-panel {
+	padding: 28px;
+	background: var(--panel);
+	border-left: 4px solid var(--accent);
+}
+
+.file-details p {
+	margin-bottom: 8px;
+}
+
+.file-details strong {
+	color: var(--accent);
+}
+
+.about-text {
+	max-width: 800px;
+	margin-top: 28px;
+	color: var(--muted-text);
+}
+
+.progress-line {
+	height: 12px;
+	margin-top: 24px;
+	background: #444;
+}
+
+.progress-line span {
+	display: block;
+	width: 58%;
+	height: 100%;
+	background: var(--accent);
+}
+
+/* Reusable cards and skill badges */
+.card-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
+.skill-card,
+.info-card,
+.project-card {
+	background: var(--panel);
+	border: 1px solid #3d3d3d;
+	border-radius: 6px;
+}
+
+.skill-card {
+	flex: 1 1 180px;
+	padding: 18px;
+	color: var(--accent);
+	font-weight: bold;
+	text-align: center;
+}
+
+.info-card,
+.project-card {
+	flex: 1 1 280px;
+	padding: 22px;
+}
+
+.info-card p,
+.project-card p {
+	color: var(--muted-text);
+}
+
+/* Combat and off-duty sections */
+.statistics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+	margin: 28px 0;
+}
+
+.statistics div {
+	flex: 1 1 180px;
+	padding: 20px;
+	background: var(--panel);
+	text-align: center;
+}
+
+.statistics strong,
+.statistics span {
+	display: block;
+}
+
+.statistics strong {
+	color: var(--accent);
+	font-size: 36px;
+}
+
+.statistics span {
+	font-weight: bold;
+}
+
+.off-duty-details {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+
+.off-duty-details strong,
+.industry-list {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+/* Projects, objective, and contact sections */
+.project-card a {
+	background: transparent;
+	font-size: 13px;
+}
+
+.objective-text {
+	max-width: 760px;
+	font-size: 20px;
+}
+
+.contact-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 24px;
+}
+
+.contact-links .button {
+	margin: 0;
+}
+
+/* Footer */
+.site-footer {
+	padding: 32px 24px;
+	border-top: 1px solid #444;
+	color: var(--muted-text);
+	text-align: center;
+}
+
+/* Simple responsive layout for smaller screens */
+@media (max-width: 700px) {
+	.navigation,
+	.hero {
+		display: block;
+	}
+
+	.nav-links {
+		margin-top: 12px;
+	}
+
+	.nav-links a {
+		display: inline-block;
+		margin: 0 14px 4px 0;
+	}
+
+	.hero {
+		min-height: auto;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+}
+
+/* Cinematic classified-file visual layer */
+:root {
+	--background: #080a0d;
+	--panel: rgba(17, 21, 26, 0.86);
+	--panel-light: rgba(35, 42, 49, 0.82);
+	--accent: #a7192e;
+	--accent-bright: #d9424d;
+	--cyan: #86b9c1;
+	--text: #f0eee7;
+	--muted-text: #a7adb0;
+	--border: rgba(197, 209, 211, 0.25);
+}
+
+body {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.50)), url("img/horror-background.jpg");
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	color: var(--text);
+	font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+body::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.18));
+	content: "";
+}
+
+.site-header {
+	background: rgba(8, 10, 13, 0.94);
+	border-bottom: 1px solid var(--border);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.site-label,
+.nav-links a,
+h1,
+h2,
+h3,
+.eyebrow,
+.project-number,
+.status,
+.file-labels,
+.image-caption,
+.statistics span {
+	font-family: "Arial Narrow", "Trebuchet MS", Arial, sans-serif;
+}
+
+.site-label,
+.nav-links a {
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.nav-links a {
+	color: var(--muted-text);
+}
+
+.nav-links a:hover,
+.site-label:hover {
+	color: var(--accent-bright);
+}
+
+.section-container {
+	padding-top: 96px;
+	padding-bottom: 96px;
+}
+
+.alternate-section {
+	background: rgba(10, 13, 17, 0.46);
+	border-top: 1px solid rgba(197, 209, 211, 0.1);
+	border-bottom: 1px solid rgba(197, 209, 211, 0.1);
+}
+
+h1 {
+	max-width: 760px;
+	margin-bottom: 22px;
+	font-size: clamp(42px, 6vw, 76px);
+	letter-spacing: 2px;
+	text-shadow: 0 0 24px rgba(167, 25, 46, 0.28);
+}
+
+h2 {
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+.eyebrow,
+.project-number,
+.status {
+	color: var(--accent-bright);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.hero {
+	min-height: 760px;
+}
+
+.hero-name {
+	color: var(--cyan);
+	letter-spacing: 4px;
+}
+
+.file-labels {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 18px;
+	margin-bottom: 24px;
+	color: var(--cyan);
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+.identity-list li::marker {
+	color: var(--accent-bright);
+}
+
+.button,
+.project-card a {
+	background: rgba(167, 25, 46, 0.86);
+	border-color: var(--accent-bright);
+	color: var(--text);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.button:hover,
+.project-card a:hover {
+	background: var(--accent-bright);
+	box-shadow: 0 0 18px rgba(217, 66, 77, 0.35);
+	transform: translateY(-3px);
+}
+
+.button-outline,
+.project-card a {
+	background: transparent;
+}
+
+.hero-image-frame {
+	position: relative;
+	flex: 0 1 500px;
+	min-height: 570px;
+	border-right: 1px solid rgba(217, 66, 77, 0.7);
+	border-bottom: 1px solid rgba(217, 66, 77, 0.7);
+	overflow: hidden;
+	box-shadow: -30px 0 70px rgba(8, 10, 13, 0.8);
+}
+
+.hero-image-frame::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(90deg, rgba(8, 10, 13, 0.78), transparent 38%, rgba(8, 10, 13, 0.16)), linear-gradient(0deg, rgba(8, 10, 13, 0.8), transparent 35%);
+	content: "";
+	pointer-events: none;
+}
+
+.hero-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 570px;
+	object-fit: contain;
+	object-position: center;
+	filter: saturate(0.78) contrast(1.12);
+	transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.hero-image-frame:hover .hero-image {
+	transform: scale(1.04);
+	filter: saturate(1) contrast(1.12);
+}
+
+.image-caption {
+	position: absolute;
+	right: 18px;
+	bottom: 14px;
+	z-index: 1;
+	color: var(--cyan);
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+.content-panel,
+.education-panel,
+.skill-card,
+.info-card,
+.project-card,
+.statistics div {
+	background: var(--panel);
+	border-color: var(--border);
+	box-shadow: 0 14px 35px rgba(0, 0, 0, 0.24);
+}
+
+.content-panel,
+.education-panel {
+	border-left-color: var(--accent);
+}
+
+.file-details p {
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(197, 209, 211, 0.1);
+}
+
+.file-details strong,
+.off-duty-details strong,
+.industry-list {
+	color: var(--cyan);
+}
+
+.progress-line {
+	background: #30383b;
+	border: 1px solid var(--border);
+}
+
+.progress-line span {
+	background: var(--accent);
+	box-shadow: 0 0 12px rgba(217, 66, 77, 0.5);
+}
+
+.skill-card,
+.info-card,
+.project-card {
+	transition: border-color 0.25s, background 0.25s, transform 0.25s;
+}
+
+.skill-card {
+	position: relative;
+	padding: 22px 18px;
+	color: var(--text);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+.skill-card::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 28px;
+	height: 3px;
+	background: var(--accent-bright);
+	content: "";
+}
+
+.skill-card:hover,
+.info-card:hover,
+.project-card:hover {
+	background: var(--panel-light);
+	border-color: var(--accent-bright);
+	transform: translateY(-4px);
+}
+
+.statistics strong {
+	color: var(--accent-bright);
+	font-size: 46px;
+	text-shadow: 0 0 15px rgba(217, 66, 77, 0.4);
+}
+
+.project-card::after {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 7px;
+	height: 7px;
+	background: var(--accent-bright);
+	box-shadow: 0 0 10px var(--accent-bright);
+	content: "";
+}
+
+.site-footer {
+	background: rgba(5, 7, 9, 0.86);
+	border-top-color: var(--border);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 760px) {
+	.hero-image-frame {
+		min-height: 440px;
+		margin-top: 42px;
+	}
+
+	.hero-image {
+		min-height: 440px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	body {
+		animation: none;
+	}
+
+	* {
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Hero image integration and full background composition */
+body {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.18)), url("img/horror-background-new.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hero-image-frame {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+}
+
+.hero-image-frame::after {
+	background: transparent;
+}
+
+.hero-image {
+	background: transparent;
+	mix-blend-mode: normal;
+	object-fit: contain;
+	opacity: 1;
+	filter: brightness(0.82) contrast(1.35) saturate(0.82) drop-shadow(0 10px 18px rgba(0, 0, 0, 0.82)) drop-shadow(0 0 12px rgba(167, 25, 46, 0.3));
+}
+
+/* Fixed cinematic environments behind the scrolling content */
+.background-system {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.background-layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0;
+	filter: blur(0);
+	transition: opacity 900ms ease, filter 900ms ease;
+}
+
+.background-layer::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(4, 7, 10, 0.24);
+	content: "";
+}
+
+.background-layer-visible {
+	opacity: 1;
+	filter: blur(0);
+}
+
+.background-layer:not(.background-layer-visible) {
+	filter: blur(3px);
+}
+
+header,
+main,
+footer {
+	position: relative;
+	z-index: 1;
+}
+
+/* Interactive avatar cue and dossier opening effect */
+.hero-image-frame {
+	cursor: pointer;
+	transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.hero-image-frame:hover {
+	filter: drop-shadow(0 0 14px rgba(217, 66, 77, 0.38));
+	transform: scale(1.01);
+}
+
+.hero-image-frame.is-opening .hero-image {
+	animation: avatar-file-flip 0.35s ease-in forwards;
+}
+
+@keyframes avatar-file-flip {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.02) rotateY(75deg); opacity: 0.6; }
+	100% { transform: scale(1) rotateY(90deg); opacity: 0; }
+}
+
+/* Full-screen classified dossier */
+.dossier-is-open {
+	overflow: hidden;
+}
+
+.dossier-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 28px;
+	background: rgba(3, 5, 7, 0.88);
+	overflow-y: auto;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dossier-overlay.is-open {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.dossier-window {
+	position: relative;
+	width: 100%;
+	max-width: 1180px;
+	min-height: calc(100vh - 56px);
+	margin: auto;
+	padding: 52px;
+	background: linear-gradient(135deg, rgba(20, 25, 30, 0.98), rgba(8, 11, 15, 0.97));
+	border: 1px solid var(--border);
+	border-top: 3px solid var(--accent-bright);
+	box-shadow: 0 20px 80px rgba(0, 0, 0, 0.7), 0 0 30px rgba(167, 25, 46, 0.16);
+	transform: translateY(12px) scale(0.98);
+	transition: transform 0.35s ease;
+}
+
+.dossier-overlay.is-open .dossier-window {
+	transform: translateY(0) scale(1);
+}
+
+.dossier-window::before,
+.dossier-window::after {
+	position: absolute;
+	width: 42px;
+	height: 42px;
+	border-color: var(--cyan);
+	content: "";
+	pointer-events: none;
+}
+
+.dossier-window::before {
+	top: 16px;
+	left: 16px;
+	border-top: 1px solid;
+	border-left: 1px solid;
+}
+
+.dossier-window::after {
+	right: 16px;
+	bottom: 16px;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.dossier-close {
+	position: absolute;
+	top: 22px;
+	right: 24px;
+	z-index: 1;
+	padding: 9px 12px;
+	background: transparent;
+	border: 1px solid var(--accent-bright);
+	color: var(--text);
+	cursor: pointer;
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	transition: background 0.25s, box-shadow 0.25s;
+}
+
+.dossier-close:hover {
+	background: var(--accent);
+	box-shadow: 0 0 16px rgba(217, 66, 77, 0.35);
+}
+
+.dossier-header {
+	margin-bottom: 36px;
+	padding-bottom: 22px;
+	border-bottom: 1px solid var(--border);
+}
+
+.dossier-header h2 {
+	margin-bottom: 14px;
+	color: var(--text);
+	font-size: 34px;
+}
+
+.dossier-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 28px;
+	color: var(--cyan);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+.dossier-content {
+	display: flex;
+	align-items: stretch;
+	gap: 22px;
+}
+
+.dossier-column {
+	padding: 22px;
+	background: rgba(4, 7, 10, 0.42);
+	border: 1px solid rgba(197, 209, 211, 0.18);
+}
+
+.dossier-subject {
+	flex: 1 1 30%;
+}
+
+.dossier-summary {
+	flex: 1 1 42%;
+	color: var(--muted-text);
+}
+
+.dossier-status-panels {
+	flex: 1 1 28%;
+}
+
+.dossier-label {
+	margin-bottom: 18px;
+	color: var(--accent-bright);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.dossier-details p {
+	margin-bottom: 10px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid rgba(197, 209, 211, 0.1);
+	font-size: 13px;
+}
+
+.dossier-details strong,
+.intelligence-list strong {
+	color: var(--cyan);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+.dossier-summary p {
+	margin-bottom: 20px;
+}
+
+.status-panel {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 10px;
+	padding: 12px 10px;
+	background: rgba(35, 42, 49, 0.42);
+	border-left: 2px solid var(--accent);
+	font-family: "Arial Narrow", Arial, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+.status-panel span {
+	color: var(--cyan);
+	text-align: right;
+}
+
+.dossier-intelligence {
+	margin-top: 22px;
+	padding: 22px;
+	background: rgba(4, 7, 10, 0.42);
+	border: 1px solid rgba(197, 209, 211, 0.18);
+}
+
+.intelligence-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 18px;
+}
+
+.intelligence-list p {
+	flex: 1 1 240px;
+	margin: 0;
+	padding: 14px;
+	background: rgba(35, 42, 49, 0.28);
+	color: var(--muted-text);
+	font-size: 13px;
+}
+
+@media (max-width: 760px) {
+	.dossier-overlay {
+		padding: 12px;
+	}
+
+	.dossier-window {
+		padding: 38px 20px 24px;
+	}
+
+	.dossier-close {
+		top: 14px;
+		right: 14px;
+	}
+
+	.dossier-header h2 {
+		padding-right: 110px;
+		font-size: 26px;
+	}
+
+	.dossier-content {
+		display: block;
+	}
+
+	.dossier-column {
+		margin-bottom: 18px;
+	}
+}
+
+/* Circular HUD cards */
+.skill-list,
+#abilities .card-list,
+.statistics {
+	justify-content: center;
+}
+
+.skill-card,
+#abilities .info-card,
+.statistics div {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex: 0 0 auto;
+	overflow: visible;
+	border-radius: 50%;
+	text-align: center;
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.skill-card {
+	width: 170px;
+	height: 170px;
+	padding: 24px;
+	background: rgba(17, 21, 26, 0.88);
+	border: 1px solid var(--cyan);
+	color: var(--text);
+}
+
+#abilities .info-card {
+	width: 295px;
+	height: 295px;
+	padding: 48px;
+	background: rgba(17, 21, 26, 0.9);
+	border: 1px solid var(--accent);
+}
+
+#abilities .info-card h3,
+#abilities .info-card p {
+	position: relative;
+	z-index: 1;
+}
+
+#abilities .info-card h3 {
+	font-size: 18px;
+}
+
+#abilities .info-card p {
+	margin-bottom: 0;
+	font-size: 13px;
+}
+
+.statistics div {
+	width: 190px;
+	height: 190px;
+	padding: 24px;
+	background: rgba(17, 21, 26, 0.9);
+	border: 1px solid var(--accent);
+}
+
+.statistics strong,
+.statistics span {
+	position: relative;
+	z-index: 1;
+}
+
+/* The ring rotates, while the card text stays still. */
+.skill-card::after,
+#abilities .info-card::after,
+.statistics div::after {
+	position: absolute;
+	top: -9px;
+	right: -9px;
+	bottom: -9px;
+	left: -9px;
+	border: 1px dashed var(--cyan);
+	border-radius: 50%;
+	content: "";
+	pointer-events: none;
+}
+
+.skill-card::before,
+#abilities .info-card::before,
+.statistics div::before {
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	bottom: -14px;
+	left: -14px;
+	border: 2px solid transparent;
+	border-top-color: var(--accent-bright);
+	border-right-color: var(--cyan);
+	border-radius: 50%;
+	content: "";
+	pointer-events: none;
+}
+
+.skill-card:hover,
+#abilities .info-card:hover,
+.statistics div:hover {
+	background: rgba(35, 42, 49, 0.94);
+	border-color: var(--accent-bright);
+	box-shadow: 0 0 24px rgba(167, 25, 46, 0.4), 0 0 10px rgba(134, 185, 193, 0.22);
+	transform: scale(1.04);
+}
+
+.skill-card:hover::before,
+#abilities .info-card:hover::before,
+.statistics div:hover::before {
+	animation: hud-ring-spin 5s linear infinite;
+}
+
+@keyframes hud-ring-spin {
+	to { transform: rotate(360deg); }
+}
+
+@media (max-width: 760px) {
+	.skill-card {
+		width: 145px;
+		height: 145px;
+	}
+
+	#abilities .info-card {
+		width: min(82vw, 295px);
+		height: min(82vw, 295px);
+		padding: 38px;
+	}
+
+	.statistics div {
+		width: 155px;
+		height: 155px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.skill-card:hover::before,
+	#abilities .info-card:hover::before,
+	.statistics div:hover::before {
+		animation: none;
+	}
+}
+
+/* Centered Off-Duty text composition */
+#off-duty {
+	text-align: center;
+}
+
+#off-duty .off-duty-details {
+	justify-content: center;
+	margin: 28px auto;
+}
+
+#off-duty > p:last-child {
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#combat {
+	text-align: center;
+}
+
+#combat .statistics {
+	justify-content: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 760px) {
+	#off-duty .off-duty-details {
+		flex-direction: column;
+		align-items: center;
+		gap: 18px;
+	}
+}
